@@ -1,4 +1,4 @@
-TTSClient
+TTSClient 1.0
 =========
 
-TTS Client
+TTS Client 1.0
