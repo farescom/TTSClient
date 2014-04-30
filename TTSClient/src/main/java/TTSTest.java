@@ -44,24 +44,46 @@ public class TTSTest {
 //		boolean status = SoundManipulator.concatenate(list, "sounds/system/haha.mp3");
 //		System.out.println("Status: "+status);
 		
-		String key = "e113a69fbf0240c09441d4755a2bdfe9";
-		Speaker speaker = Speaker.getSpeaker(key);
-		speaker.setStoreMode(StoreMode.store);
-        speaker.setAudioFormat(AudioFormat._48khz_16bit_stereo);
-//		speaker.speak("We will open sound file from: sounds/system/intro.mp3");
-//		speaker.play("sounds/system/final.mp3");
-        speaker.speak("Application recording.");
+//		String key = "e113a69fbf0240c09441d4755a2bdfe9";
+//		Speaker speaker = Speaker.getSpeaker(key);
+//		speaker.setStoreMode(StoreMode.store);
+//        speaker.setAudioFormat(AudioFormat._48khz_16bit_stereo);
+//        
+//        String text = "polski test tego, co polski test tego, co polski test tego, co polski test tego, co polski test, c ";
+//        String result = "";
+//		for (int i=0; i<10; i++) {
+//			if (i<10)
+//				result += text + i;
+//			else
+//				result += text + (i-10);
+//		}
+//		System.out.println(result + " " + result.length());
+//        
+//        speaker.speak(result);
+//        
+//	      String sql = "CREATE TABLE CONFIG " +
+//                  "(ID 			INT 		PRIMARY KEY		AUTOINCREMENT," +
+//                  " LANGUAGE       CHAR(5)     NOT NULL, " + 
+//                  " SPEED          TINYINT     NOT NULL, " + 
+//                  " CODING        	CHAR(20), 	NOT NULL, " + 
+//                  " TEXT         	CHAR(1000)	NOT NULL)"; 
+//	      System.out.println(sql);
         
-        List<String> tab = new ArrayList<String>();
-        //tab.add("sounds/16_16_s.mp3");
-        //tab.add("sounds/16_16_m.mp3");
-        //tab.add("sounds/16_8_s.mp3");
-        //tab.add("sounds/16_8_m.mp3");
-        tab.add("sounds/system/pause_converted.mp3");
-        tab.add("sounds/1.mp3");
-        tab.add("sounds/system/intro_converted.mp3");
         
-        SoundManipulator.concatenate( tab, "sounds/result.mp3");
+////		speaker.speak("We will open sound file from: sounds/system/intro.mp3");
+////		speaker.play("sounds/system/final.mp3");
+//        speaker.speak("Application recording.");
+//        
+//        List<String> tab = new ArrayList<String>();
+//        //tab.add("sounds/16_16_s.mp3");
+//        //tab.add("sounds/16_16_m.mp3");
+//        //tab.add("sounds/16_8_s.mp3");
+//        //tab.add("sounds/16_8_m.mp3");
+//        tab.add("sounds/system/pause_converted.mp3");
+//        tab.add("sounds/1.mp3");
+//        tab.add("sounds/system/intro_converted.mp3");
+//        
+//        SoundManipulator.concatenate( tab, "sounds/result.mp3");
         
        
         
@@ -128,36 +150,36 @@ public class TTSTest {
         
         
         
-        Connection c = null;
-        Statement stmt = null;
-        try {
-          Class.forName("org.sqlite.JDBC");
-          c = DriverManager.getConnection("jdbc:sqlite:test.db");
-          c.setAutoCommit(false);
-          System.out.println("Opened database successfully");
-
-          stmt = c.createStatement();
-          ResultSet rs = stmt.executeQuery( "SELECT * FROM COMPANY;" );
-          while ( rs.next() ) {
-             int id = rs.getInt("id");
-             String  name = rs.getString("name");
-             int age  = rs.getInt("age");
-             String  address = rs.getString("address");
-             float salary = rs.getFloat("salary");
-             System.out.println( "ID = " + id );
-             System.out.println( "NAME = " + name );
-             System.out.println( "AGE = " + age );
-             System.out.println( "ADDRESS = " + address );
-             System.out.println( "SALARY = " + salary );
-             System.out.println();
-          }
-          rs.close();
-          stmt.close();
-          c.close();
-        } catch ( Exception e ) {
-          System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-          System.exit(0);
-        }
-        System.out.println("Operation done successfully");
+//        Connection c = null;
+//        Statement stmt = null;
+//        try {
+//          Class.forName("org.sqlite.JDBC");
+//          c = DriverManager.getConnection("jdbc:sqlite:test.db");
+//          c.setAutoCommit(false);
+//          System.out.println("Opened database successfully");
+//
+//          stmt = c.createStatement();
+//          ResultSet rs = stmt.executeQuery( "SELECT * FROM COMPANY;" );
+//          while ( rs.next() ) {
+//             int id = rs.getInt("id");
+//             String  name = rs.getString("name");
+//             int age  = rs.getInt("age");
+//             String  address = rs.getString("address");
+//             float salary = rs.getFloat("salary");
+//             System.out.println( "ID = " + id );
+//             System.out.println( "NAME = " + name );
+//             System.out.println( "AGE = " + age );
+//             System.out.println( "ADDRESS = " + address );
+//             System.out.println( "SALARY = " + salary );
+//             System.out.println();
+//          }
+//          rs.close();
+//          stmt.close();
+//          c.close();
+//        } catch ( Exception e ) {
+//          System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+//          System.exit(0);
+//        }
+//        System.out.println("Operation done successfully");
 	}
 }
