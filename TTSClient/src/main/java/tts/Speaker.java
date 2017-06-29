@@ -67,7 +67,7 @@ import org.xml.sax.SAXException;
  * <li> After setting Speaker's properties, its time to call speaking method:
  * {@link #speak(java.lang.String)}. </li> </ol>
  *
- * @author jakub_fara@hotmail.com
+ * @author jakub
  */
 public class Speaker {
 
