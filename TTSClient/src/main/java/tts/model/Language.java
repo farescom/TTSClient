@@ -20,7 +20,7 @@ package tts.model;
  * Language is used to specify the language of the Speaker.
  * <p>There are 28 languages available.</p>
  * 
- * @author jakub_fara@hotmail.com
+ * @author jakub
  */
 public enum Language {
     /**Catalan*/
